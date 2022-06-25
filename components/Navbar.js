@@ -2,8 +2,7 @@ import React from "react";
 import Gradient from "rgt";
 
 const styles = {
-  wrapper:
-    "mx-5 p-5 flex flex justify-between items-center border-[#A38AC8] border-b-2 mb-4",
+  wrapper: "mx-5 p-5 flex flex justify-between items-center mb-4",
   left: "",
   right: "flex text-[#6E2DD3] space-x-10 text-xl font-bold",
   connectWalletBtn:
@@ -13,19 +12,21 @@ const styles = {
 
 const Navbar = () => {
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.left}>
-        <div className="text-3xl">
-          <Gradient dir="left-to-right" from="#F9AC21" to="#6B17EC">
-            InternVerse
-          </Gradient>
+    <div className="fixed">
+      <div className={styles.wrapper}>
+        <div className={styles.left}>
+          <div className="text-3xl">
+            <Gradient dir="left-to-right" from="#F9AC21" to="#6B17EC">
+              InternVerse
+            </Gradient>
+          </div>
         </div>
-      </div>
-      <div className={styles.right}>
-        <div className={styles.navItem}>Bounties</div>
-        <div className={styles.navItem}>Contest</div>
-        <div className={styles.navItem}>Mission</div>
-        <div className={styles.connectWalletBtn}>Connect Wallet</div>
+        <div className={styles.right}>
+          <div className={styles.navItem}>Bounties</div>
+          <div className={styles.navItem}>Contest</div>
+          <div className={styles.navItem}>Mission</div>
+          <div className={styles.connectWalletBtn}>Connect Wallet</div>
+        </div>
       </div>
     </div>
   );

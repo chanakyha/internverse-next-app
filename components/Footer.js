@@ -5,8 +5,7 @@ import { AiFillTwitterCircle } from "react-icons/ai";
 import { AiFillInstagram } from "react-icons/ai";
 
 const styles = {
-  wrapper:
-    "border-t-2 border-[#A38AC8] p-5 m-5 h-[100px] flex justify-between text-white",
+  wrapper: " p-5 m-5 h-[100px] flex justify-between text-white",
   left: "flex flex-col justify-center items-center",
   right: "flex flex-col items-center space-y-2",
   socialIcons: "text-2xl fill-[#FDBC46] hover:scale-150 ease-in-out",

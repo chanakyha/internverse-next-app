@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import Image from "next/image";
 import InternverseGradient from "../components/InternverseGradient";
@@ -6,6 +6,7 @@ import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import { AiFillCheckCircle } from "react-icons/ai";
 import Footer from "../components/Footer";
 import Gradient from "rgt";
+import IndexModal from "../components/IndexModal";
 
 const styles = {
   wrapper: "",
@@ -14,7 +15,7 @@ const styles = {
   title: "font-bold text-6xl text-white space-y-2",
   subtitle: "text-white font-bold mt-3 space-y-3",
   button:
-    "my-[5%] mx-5 bg-[#F9AC21] w-[160px] rounded-full outline outline-2 px-4 py-2 shadow-xl cursor-pointer",
+    "my-[5%] mx-5 bg-[#F9AC21] w-[190px] rounded-full outline outline-2 px-4 py-2 shadow-xl cursor-pointer",
   buttonContent: "text-center font-bold text-lg flex items-center space-x-3",
   heading: "text-white text-xl font-bold flex items-end space-x-2",
   hireTalentContent: "flex border-black justify-center py-[4%] ",
@@ -22,6 +23,8 @@ const styles = {
 };
 
 const Home = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div className={styles.wrapper}>
       <Navbar />
@@ -29,22 +32,30 @@ const Home = () => {
         <div className={styles.hireTalentContent}>
           <div className={styles.left}>
             <div className={styles.content1}>
-              <div className="absolute left-0 top-12">
-                <Image src={require("../assets/images/ellipse1.png")} />
+              <div
+                style={{ fontFamily: "PilatExtended" }}
+                className={styles.title}
+              >
+                <p>Looking For Some Great Talent To Work With You</p>
               </div>
-              <div className={styles.title}>
-                <p>Looking for some great talent to work with you ?</p>
-              </div>
-              <div className={styles.subtitle}>
+              <div style={{ fontFamily: "Lato" }} className={styles.subtitle}>
                 We at <InternverseGradient /> help you in getting the perfect
                 intern.
               </div>
               <div className={styles.button}>
                 <div className={styles.buttonContent}>
-                  <p className="cursor-pointer">Hire Talent</p>
+                  <button
+                    onClick={() => setIsModalOpen(true)}
+                    className={`cursor-pointer`}
+                  >
+                    Hire Talent
+                  </button>
                   <BsFillArrowRightCircleFill />
                 </div>
               </div>
+            </div>
+            <div className="absolute left-0 z-[-1] top-[-51px]">
+              <Image src={require("../assets/images/ellipse1.png")} />
             </div>
           </div>
           <div className={styles.right}>
@@ -76,10 +87,13 @@ const Home = () => {
               <div className="absolute right-0 top-[690px]">
                 <Image src={require("../assets/images/ellipse5.png")} />
               </div>
-              <div className={styles.title}>
+              <div
+                style={{ fontFamily: "PilatExtended" }}
+                className={styles.title}
+              >
                 <p>Want to Monetize your Skills ?</p>
               </div>
-              <div className={styles.subtitle}>
+              <div style={{ fontFamily: "Lato" }} className={styles.subtitle}>
                 Get Hired at <InternverseGradient />
               </div>
               <div className={styles.button}>
@@ -106,10 +120,15 @@ const Home = () => {
               <div className="absolute left-0">
                 <Image src={require("../assets/images/ellipse1.png")} />
               </div>
-              <div className={styles.title}>
-                <div>Get hired in WEB 3.0!</div>
+              <div
+                style={{ fontFamily: "PilatExtended" }}
+                className={styles.title}
+              >
+                <p>Get hired in WEB 3.0!</p>
               </div>
-              <div className={styles.subtitle}>Placement in Web3 Ecosystem</div>
+              <div style={{ fontFamily: "Lato" }} className={styles.subtitle}>
+                Placement in Web3 Ecosystem
+              </div>
               <div className="my-[5%] mx-5 bg-[#F9AC21] w-[220px] rounded-full outline outline-2 px-4 py-2 shadow-xl">
                 <div className={styles.buttonContent}>
                   <p>Find Companies</p>
@@ -144,6 +163,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <IndexModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
       <Footer />
     </div>
   );
@@ -154,7 +174,7 @@ export default Home;
 const CircleComponent = ({ image, text }) => (
   <div className="flex flex-col justify-center items-center">
     <Image src={require("../assets/images/" + image)} />
-    <p className="text-2xl font-bold">
+    <p style={{ fontFamily: "PilatExtended" }} className="text-2xl font-bold">
       <Gradient dir="left-to-right" from="#F9AC21" to="#6B17EC">
         {text}
       </Gradient>
