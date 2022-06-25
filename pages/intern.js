@@ -4,21 +4,23 @@ import BannerPNG from "../assets/images/banner.png";
 import Link from "next/link";
 import InternForm from "../components/InternForm";
 import InternTearms from "../components/InternTearms";
+import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 const styles = {
-  wrapper: "w-screen h-full bg-[#1B0442]",
+  wrapper: "w-screen h-full",
   banner: "hidden md:inline-block w-screen h-[200px]",
   content: "m-5 px-5",
   title: "font-bold text-2xl text-white",
-  subtitle: "bg-[#F9F9FA] p-5 mt-3 rounded-md",
+  subtitle: "bg-[#FDBC46] p-5 mt-3 rounded-md text-lg",
   link: "text-zinc-200",
-  mainContent: "m-5 px-5 flex items-start justify-between",
+  mainContent: "m-5 px-5 mt-[5%] flex items-start justify-between",
 };
 
 const StarIntern = () => {
   return (
     <div className={styles.wrapper}>
+      <Navbar />
       <div className={styles.banner}>
         <Image
           className={styles.banner}
@@ -30,7 +32,7 @@ const StarIntern = () => {
       <div className={styles.content}>
         <h2 className={styles.title}>Be a Super Intern</h2>
         <h3 className={styles.subtitle}>
-          💡 <span className="font-bold">Want to Earn? </span>
+          <span className="font-bold text-xl">Want to Earn? </span>
           Check out Internship Opening on <Link href="/">Job board</Link>{" "}
           freelance work and <Link href="/">Bounties</Link>
         </h3>

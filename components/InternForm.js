@@ -3,16 +3,16 @@ import CountrySelector from "./CountrySelect";
 import Select from "react-select";
 
 const styles = {
-  wrapper: "overflow-y-auto h-[600px] rounded-md",
+  wrapper: "overflow-y-auto rounded-md",
   header: "font-bold text-3xl text-white",
-  formContent: "bg-[#fbfafa] p-5 my-2 rounded-md",
+  formContent: "bg-[#3A3366] p-5 my-2 rounded-md",
   inputContainer: "my-3 flex flex-col space-y-2",
-  title: "font-bold",
-  subtitle: "text-black opacity-2",
+  title: "font-bold text-[#DCCDF4]",
+  subtitle: "text-[#8B77AA] opacity-2",
   dropdownItems: "",
-  input: "border w-full p-1",
+  input: "border w-full p-1 rounded-sm bg-[#DCCDF4]",
   redStar: "text-red-500",
-  radioContainer: "flex items-center justify-start",
+  radioContainer: "text-[#8B77AA] flex items-center justify-start",
 };
 
 const InternForm = () => {
@@ -50,11 +50,26 @@ const InternForm = () => {
           Input={() => (
             <Select
               options={[
-                { label: "Actively Looking for full time positions" },
-                { label: "Passively Looking for full time positions" },
-                { label: "Actively Looking for Freelance work" },
-                { label: "Passively Looing for Freelance work" },
-                { label: "Actively Looking for Internships" },
+                {
+                  label: "Actively Looking for full time positions",
+                  value: "Actively Looking for full time positions",
+                },
+                {
+                  label: "Passively Looking for full time positions",
+                  value: "Passively Looking for full time positions",
+                },
+                {
+                  label: "Actively Looking for Freelance work",
+                  value: "Actively Looking for Freelance work",
+                },
+                {
+                  label: "Passively Looing for Freelance work",
+                  value: "Passively Looing for Freelance work",
+                },
+                {
+                  label: "Actively Looking for Internships",
+                  value: "Actively Looking for Internships",
+                },
               ]}
             />
           )}
@@ -65,18 +80,33 @@ const InternForm = () => {
           Input={() => (
             <Select
               options={[
-                { label: "Community Management" },
-                { label: "DataScience/Analytics" },
-                { label: "Devops" },
-                { label: "Frontend Development" },
-                { label: "Backend Development" },
-                { label: "Fullstack Development" },
-                { label: "Mobile Development" },
-                { label: "Graphic Design" },
-                { label: "Product Management" },
-                { label: "UI/UX design<" },
-                { label: "Video/Animation/Editing" },
-                { label: "Game Designer" },
+                {
+                  label: "Community Management",
+                  value: "Community Management",
+                },
+                {
+                  label: "DataScience/Analytics",
+                  value: "DataScience/Analytics",
+                },
+                { label: "Devops", value: "Devops" },
+                {
+                  label: "Frontend Development",
+                  value: "Frontend Development",
+                },
+                { label: "Backend Development", value: "Backend Development" },
+                {
+                  label: "Fullstack Development",
+                  value: "Fullstack Development",
+                },
+                { label: "Mobile Development", value: "Mobile Development" },
+                { label: "Graphic Design", value: "Graphic Design" },
+                { label: "Product Management", value: "Product Management" },
+                { label: "UI/UX design", value: "UI/UX design" },
+                {
+                  label: "Video/Animation/Editing",
+                  value: "Video/Animation/Editing",
+                },
+                { label: "Game Designer", value: "Game Designer" },
               ]}
             />
           )}

@@ -5,23 +5,27 @@ import * as proofOfWorkAnimation from "../assets/animations/proofOfWork.json";
 import * as interviewAnimation from "../assets/animations/interview.json";
 import * as checkedAnimation from "../assets/animations/checked.json";
 import Lottie from "react-lottie";
+import Gradient from "rgt";
 
 const styles = {
-  wrapper: "w-1/2 overflow-y-auto h-[600px]",
+  wrapper: "w-1/2 overflow-y-auto",
   title: "font-bold text-2xl text-white",
   cardContainer: "ml-5",
   cardWrapper:
-    "flex bg-[#F9AC21] px-3 m-3 rounded-md justify-center items-center drop-shadow-xl",
+    "outline rounded-md outline-[#6548A3] box-shadow-md flex px-3 m-3 rounded-md justify-center items-center drop-shadow-xl",
   contentWrapper: "flex flex-col ml-4",
-  mainTitle: "font-bold text-md",
-  content: "text-white",
+  mainTitle: "font-bold text-md text-[#C19EF9]",
+  content: "text-[#A38AC8]",
 };
 
 const InternTearms = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.title}>
-        Benefits of Joining the Superteam Talent Network
+        Why to Hire from{" "}
+        <Gradient dir="left-to-right" from="#F9AC21" to="#6B17EC">
+          InternVERSE
+        </Gradient>
       </div>
       <div className={styles.cardContainer}>
         <Card
