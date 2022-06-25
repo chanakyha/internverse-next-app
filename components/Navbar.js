@@ -2,7 +2,7 @@ import React from "react";
 import Gradient from "rgt";
 
 const styles = {
-  wrapper: "mx-5 p-5 flex flex justify-between items-center mb-4",
+  wrapper: "fixed w-screen bg-[#1B0442]",
   left: "",
   right: "flex text-[#6E2DD3] space-x-10 text-xl font-bold",
   connectWalletBtn:
@@ -12,8 +12,8 @@ const styles = {
 
 const Navbar = () => {
   return (
-    <div className="fixed">
-      <div className={styles.wrapper}>
+    <div className={styles.wrapper}>
+      <div className="mx-5 p-5 mb-4 flex flex justify-between items-center">
         <div className={styles.left}>
           <div className="text-3xl">
             <Gradient dir="left-to-right" from="#F9AC21" to="#6B17EC">

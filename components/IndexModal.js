@@ -8,7 +8,7 @@ import Router from "next/router";
 
 const styles = {
   wrapper: "px-5 flex flex-col items-center justify-center mt-[4%]",
-  headerTitle: "text-white text-6xl",
+  headerTitle: "text-white text-5xl",
   image: "",
   content: "space-y-2",
   title: "text-[#C19EF9] text-5xl font-bold",
@@ -30,7 +30,10 @@ const IndexModal = ({ isModalOpen, setIsModalOpen }) => {
     >
       <ModalCloseBtn setIsModalOpen={setIsModalOpen} />
       <div className={styles.wrapper}>
-        <div className={styles.headerTitle}>
+        <div
+          style={{ fontFamily: "PilatExtended" }}
+          className={styles.headerTitle}
+        >
           Why to hire from <InternverseGradient /> ?
         </div>
         <div className="">
@@ -56,7 +59,10 @@ const IndexModal = ({ isModalOpen, setIsModalOpen }) => {
           />
         </div>
         <div className="flex items-center my-[5%] mx-5 bg-[#F9AC21] w-[180px] rounded-full px-4 py-2 shadow-xl cursor-pointer space-x-2 hover:scale-105 ease-in-out">
-          <button className="text-center font-bold text-lg flex items-center space-x-3">
+          <button
+            onClick={() => Router.push("/hire-intern")}
+            className="text-center font-bold text-lg flex items-center space-x-3"
+          >
             Hire Talent
           </button>
           <BsFillArrowRightCircleFill />

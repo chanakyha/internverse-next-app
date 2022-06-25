@@ -11,7 +11,7 @@ import IndexModal from "../components/IndexModal";
 const styles = {
   wrapper: "",
   mainContent: "",
-  content1: "m-5 p-5 mx-[6%] mt-[13%]",
+  content1: "m-5 p-5 mx-[6%] mt-[13%] flex flex-col",
   title: "font-bold text-6xl text-white space-y-2",
   subtitle: "text-white font-bold mt-3 space-y-3",
   button:
