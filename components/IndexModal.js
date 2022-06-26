@@ -21,6 +21,7 @@ const IndexModal = ({ isModalOpen, setIsModalOpen }) => {
       isOpen={isModalOpen}
       style={{
         content: {
+          zIndex: "999",
           position: "fixed",
           backgroundColor: "#1B0442",
         },

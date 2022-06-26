@@ -4,12 +4,11 @@ import BannerPNG from "../assets/images/banner.png";
 import Link from "next/link";
 import InternForm from "../components/InternForm";
 import InternTearms from "../components/InternTearms";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Lottie from "react-lottie";
 
 const styles = {
   wrapper: "w-screen h-full",
-  banner: "hidden md:inline-block w-screen h-[200px]",
+  banner: "hidden md:inline-flex w-screen h-[200px] justify-center mt-[7%]",
   content: "m-5 px-5",
   title: "font-bold text-2xl text-white",
   subtitle: "bg-[#FDBC46] p-5 mt-3 rounded-md text-lg",
@@ -20,14 +19,23 @@ const styles = {
 const StarIntern = () => {
   return (
     <div className={styles.wrapper}>
-      <Navbar />
       <div className={styles.banner}>
         <Image
           className={styles.banner}
           height={200}
+          width={1768}
           src={BannerPNG}
           alt="the-banner"
         />
+        <div className="absolute left-12">
+          <Lottie
+            options={{
+              animationData: require("../assets/animations/banner.json"),
+            }}
+            height={150}
+            width={150}
+          />
+        </div>
       </div>
       <div className={styles.content}>
         <h2 className={styles.title}>Be a Super Intern</h2>
@@ -41,7 +49,6 @@ const StarIntern = () => {
         <InternForm />
         <InternTearms />
       </div>
-      <Footer />
     </div>
   );
 };

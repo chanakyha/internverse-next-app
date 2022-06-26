@@ -1,13 +1,14 @@
 import React from "react";
 import Gradient from "rgt";
+import Router from "next/router";
 
 const styles = {
-  wrapper: "fixed w-screen bg-[#1B0442]",
+  wrapper: "fixed w-screen bg-[#1B0442] z-[1] shadow-2xl",
   left: "",
   right: "flex text-[#6E2DD3] space-x-10 text-xl font-bold",
   connectWalletBtn:
-    "text-[#F9AC21] outline outline-[#F9AC21] px-3 p-2 rounded-full",
-  navItem: "p-2",
+    "cursor-pointer text-[#F9AC21] outline outline-[#F9AC21] px-3 p-2 rounded-full",
+  navItem: "cursor-pointer p-2",
 };
 
 const Navbar = () => {
@@ -15,7 +16,10 @@ const Navbar = () => {
     <div className={styles.wrapper}>
       <div className="mx-5 p-5 mb-4 flex flex justify-between items-center">
         <div className={styles.left}>
-          <div className="text-3xl">
+          <div
+            onClick={() => Router.push("/")}
+            className="cursor-pointer text-3xl"
+          >
             <Gradient dir="left-to-right" from="#F9AC21" to="#6B17EC">
               InternVerse
             </Gradient>

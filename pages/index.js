@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import Navbar from "../components/Navbar";
 import Image from "next/image";
 import InternverseGradient from "../components/InternverseGradient";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import { AiFillCheckCircle } from "react-icons/ai";
-import Footer from "../components/Footer";
 import Gradient from "rgt";
 import IndexModal from "../components/IndexModal";
 
@@ -27,7 +25,6 @@ const Home = () => {
 
   return (
     <div className={styles.wrapper}>
-      <Navbar />
       <div className={styles.homeContent}>
         <div className={styles.hireTalentContent}>
           <div className={styles.left}>
@@ -164,7 +161,6 @@ const Home = () => {
         </div>
       </div>
       <IndexModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
-      <Footer />
     </div>
   );
 };
