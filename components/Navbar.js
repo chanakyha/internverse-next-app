@@ -12,6 +12,7 @@ const styles = {
 };
 
 const Navbar = ({ connectWallet, walletAddress }) => {
+  const path = Router.pathname;
   return (
     <div className={styles.wrapper}>
       <div className="mx-5 p-5 mb-4 flex flex justify-between items-center">
@@ -28,13 +29,18 @@ const Navbar = ({ connectWallet, walletAddress }) => {
         <div className={styles.right}>
           <div
             onClick={() => Router.push("/bounties")}
-            className={styles.navItem}
+            className={
+              styles.navItem +
+              ` ${path === "/bounties" ? "text-[#A672F6]" : ""}`
+            }
           >
             Bounties
           </div>
           <div
             onClick={() => Router.push("/contest")}
-            className={styles.navItem}
+            className={
+              styles.navItem + ` ${path === "/contest" ? "text-[#A672F6]" : ""}`
+            }
           >
             Contest
           </div>
