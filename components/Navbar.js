@@ -1,6 +1,6 @@
 import React from "react";
 import Gradient from "rgt";
-import Router from "next/router";
+import { useRouter } from "next/router";
 
 const styles = {
   wrapper: "fixed w-screen bg-[#1B0442] z-[1] shadow-2xl",
@@ -12,6 +12,7 @@ const styles = {
 };
 
 const Navbar = ({ connectWallet, walletAddress }) => {
+  const Router = useRouter();
   const path = Router.pathname;
   return (
     <div className={styles.wrapper}>
