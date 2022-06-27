@@ -22,9 +22,9 @@ const InternTearms = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.title}>
-        Why to Hire from{" "}
+        Steps to be a{" "}
         <Gradient dir="left-to-right" from="#F9AC21" to="#6B17EC">
-          InternVERSE
+          superINTERN
         </Gradient>
       </div>
       <div className={styles.cardContainer}>
