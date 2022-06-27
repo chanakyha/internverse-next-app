@@ -5,6 +5,7 @@ import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import { AiFillCheckCircle } from "react-icons/ai";
 import Gradient from "rgt";
 import IndexModal from "../components/IndexModal";
+import Router from "next/router";
 
 const styles = {
   wrapper: "",
@@ -101,12 +102,15 @@ const Home = () => {
                   STAR INTERN PROGRAM
                 </span>
               </div>
-              <div className={styles.button}>
+              <button
+                onClick={() => Router.push("/intern")}
+                className={styles.button}
+              >
                 <div className={styles.buttonContent}>
                   <AiFillCheckCircle />
                   <p>Apply Now</p>
                 </div>
-              </div>
+              </button>
             </div>
           </div>
         </div>
