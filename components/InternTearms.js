@@ -24,7 +24,7 @@ const InternTearms = () => {
       <div className={styles.title}>
         Steps to be a{" "}
         <Gradient dir="left-to-right" from="#F9AC21" to="#6B17EC">
-          superINTERN
+          SuperINTERN
         </Gradient>
       </div>
       <div className={styles.cardContainer}>
