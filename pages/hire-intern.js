@@ -1,3 +1,4 @@
+import Router from "next/router";
 import React, { useState } from "react";
 import { AiFillPlusCircle } from "react-icons/ai";
 import Lottie from "react-lottie";
@@ -6,7 +7,7 @@ import ListOfSuperInterns from "../components/ListOfSuperInterns";
 
 const styles = {
   wrapper: "",
-  content: "pt-[8%] m-5 p-5",
+  content: "pt-[8%] m-5 mt-0 p-5",
   headerTitle: "text-white text-6xl",
   cardContainer: "flex justify-between items-center mb-5 mt-[5%]",
   checkBox:
@@ -58,7 +59,12 @@ const HireIntern = () => {
           />
         </div>
         <div className="flex justify-end">
-          <button className="hover:scale-110 bg-[#C19EF9] justify-center flex items-center px-5 py-2 rounded-full space-x-4">
+          <button
+            onClick={() =>
+              Router.push("https://calendly.com/prayasu/30min?month=2022-06")
+            }
+            className="hover:scale-110 bg-[#C19EF9] justify-center flex items-center px-5 py-2 rounded-full space-x-4"
+          >
             <p className="text-lg font-bold">Post a Job</p>
             <AiFillPlusCircle className="text-xl" />
           </button>

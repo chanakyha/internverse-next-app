@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Router from "next/router";
 import React from "react";
 const styles = {
   wrapper: "h-full mt-5",
@@ -57,7 +58,12 @@ const SuperInterns = ({ image, name }) => (
       </p>
     </div>
     <div className={styles.right}>
-      <button className={styles.button}>Connect</button>
+      <button
+        onClick={() => Router.push("https://linktree.chanakyha-coder.xyz")}
+        className={styles.button}
+      >
+        Connect
+      </button>
     </div>
   </div>
 );

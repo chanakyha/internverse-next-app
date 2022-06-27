@@ -132,12 +132,15 @@ const Home = () => {
               <div style={{ fontFamily: "Lato" }} className={styles.subtitle}>
                 Placement in Web3 Ecosystem
               </div>
-              <div className="my-[5%] mx-5 bg-[#F9AC21] w-[220px] rounded-full outline outline-2 px-4 py-2 shadow-xl">
+              <button
+                onClick={() => Router.push("/intern")}
+                className="z-[1] my-[5%] mx-5 bg-[#F9AC21] w-[220px] rounded-full outline outline-2 px-4 py-2 shadow-xl"
+              >
                 <div className={styles.buttonContent}>
                   <p>Find Companies</p>
                   <BsFillArrowRightCircleFill />
                 </div>
-              </div>
+              </button>
             </div>
           </div>
           <div className={styles.right}>
@@ -159,9 +162,21 @@ const Home = () => {
               <Image src={require("../assets/images/ellipse5.png")} />
             </div>
             <div className="flex items-center justify-between w-full">
-              <CircleComponent image="bolt.png" text="BOUNTIES" />
-              <CircleComponent image="fire.png" text="CONTEST" />
-              <CircleComponent image="rocket.png" text="MISSIONS" />
+              <CircleComponent
+                onClick={() => Router.push("/bounties")}
+                image="bolt.png"
+                text="BOUNTIES"
+              />
+              <CircleComponent
+                onClick={() => Router.push("/contest")}
+                image="fire.png"
+                text="CONTEST"
+              />
+              <CircleComponent
+                onClick={() => Router.push("/")}
+                image="rocket.png"
+                text="MISSIONS"
+              />
             </div>
           </div>
         </div>
@@ -173,13 +188,16 @@ const Home = () => {
 
 export default Home;
 
-const CircleComponent = ({ image, text }) => (
-  <div className="flex flex-col justify-center items-center">
+const CircleComponent = ({ image, text, onClick }) => (
+  <button
+    onClick={onClick}
+    className="flex flex-col justify-center items-center"
+  >
     <Image src={require("../assets/images/" + image)} />
     <p style={{ fontFamily: "PilatExtended" }} className="text-2xl font-bold">
       <Gradient dir="left-to-right" from="#F9AC21" to="#6B17EC">
         {text}
       </Gradient>
     </p>
-  </div>
+  </button>
 );
