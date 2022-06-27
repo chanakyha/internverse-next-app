@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import InternverseGradient from "../components/InternverseGradient";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
@@ -11,11 +11,11 @@ const styles = {
   mainContent: "",
   content1: "m-5 p-5 mx-[6%] mt-[13%] flex flex-col",
   title: "font-bold text-6xl text-white space-y-2",
-  subtitle: "text-white font-bold mt-3 space-y-3",
+  subtitle: "text-white text-xl font-bold space-y-3 mt-5",
   button:
     "my-[5%] mx-5 bg-[#F9AC21] w-[190px] rounded-full outline outline-2 px-4 py-2 shadow-xl cursor-pointer",
   buttonContent: "text-center font-bold text-lg flex items-center space-x-3",
-  heading: "text-white text-xl font-bold flex items-end space-x-2",
+  heading: "text-white text-xl font-bold flex items-end space-x-2 mt-[6%]",
   hireTalentContent: "flex border-black justify-center py-[4%] ",
   right: "mr-[5%]",
 };
@@ -59,11 +59,13 @@ const Home = () => {
             <div className="absolute top-0">
               <Image src={require("../assets/images/ellipse5.png")} />
             </div>
-            <Image
-              width={500}
-              height={500}
-              src={require("../assets/images/future1.png")}
-            />
+            <div className="m-5 mt-[20%]">
+              <Image
+                width={800}
+                height={800}
+                src={require("../assets/images/future1.png")}
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -93,17 +95,17 @@ const Home = () => {
               <div style={{ fontFamily: "Lato" }} className={styles.subtitle}>
                 Get Hired at <InternverseGradient />
               </div>
-              <div className={styles.button}>
-                <div className={styles.buttonContent}>
-                  <AiFillCheckCircle />
-                  <p>Apply Now</p>
-                </div>
-              </div>
               <div className={styles.heading}>
                 <p>Join our</p>
                 <span className="text-3xl underline decoration-[#F9AC21]">
                   STAR INTERN PROGRAM
                 </span>
+              </div>
+              <div className={styles.button}>
+                <div className={styles.buttonContent}>
+                  <AiFillCheckCircle />
+                  <p>Apply Now</p>
+                </div>
               </div>
             </div>
           </div>

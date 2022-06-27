@@ -11,7 +11,7 @@ const styles = {
   navItem: "cursor-pointer p-2",
 };
 
-const Navbar = () => {
+const Navbar = ({ connectWallet, walletAddress }) => {
   return (
     <div className={styles.wrapper}>
       <div className="mx-5 p-5 mb-4 flex flex justify-between items-center">
@@ -26,10 +26,30 @@ const Navbar = () => {
           </div>
         </div>
         <div className={styles.right}>
-          <div className={styles.navItem}>Bounties</div>
-          <div className={styles.navItem}>Contest</div>
+          <div
+            onClick={() => Router.push("/bounties")}
+            className={styles.navItem}
+          >
+            Bounties
+          </div>
+          <div
+            onClick={() => Router.push("/contest")}
+            className={styles.navItem}
+          >
+            Contest
+          </div>
           <div className={styles.navItem}>Mission</div>
-          <div className={styles.connectWalletBtn}>Connect Wallet</div>
+          {walletAddress[0] ? (
+            <div className={styles.connectWalletBtn}>
+              {walletAddress[0].slice(0, 6) +
+                "..." +
+                walletAddress[0].slice(-4)}
+            </div>
+          ) : (
+            <div onClick={connectWallet} className={styles.connectWalletBtn}>
+              Connect Wallet
+            </div>
+          )}
         </div>
       </div>
     </div>
