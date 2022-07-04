@@ -62,10 +62,12 @@ const InternForm = () => {
       !formData.location &&
       !formData.email &&
       !formData.workType &&
-      !formData.skills
+      !formData.skills &&
+      !walletAddress[0]
     ) {
       return;
     }
+    console.log(walletAddress);
     setDoc(doc(db, "users", walletAddress[0]), formData, { merge: true });
     setIsModalOpen(true);
     console.log(walletAddress[0]);
@@ -243,6 +245,6 @@ const InputComponent = ({ title, subtitle, Input }) => (
       {title} <span className={styles.redStar}>*</span>
     </div>
     <div className={styles.subtitle}>{subtitle}</div>
-    <Input />
+    {Input()}
   </div>
 );

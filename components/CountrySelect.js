@@ -10,7 +10,14 @@ function CountrySelector() {
     setValue(value);
   };
 
-  return <Select options={options} value={value} onChange={changeHandler} />;
+  return (
+    <Select
+      Containerstyle={{ backgroundColor: "#DCCDF4" }}
+      options={options}
+      value={value}
+      onChange={changeHandler}
+    />
+  );
 }
 
 export default CountrySelector;
