@@ -79,7 +79,7 @@ const styles = {
   headerTitle: "text-[#D8C1FC] text-4xl mt-5",
   tabs: "flex font-bold mt-[3%] space-x-5",
   cardWrapper:
-    "bg-[#1B0442] shadow-2xl p-5 m-[7%] flex flex-col justify-between rounded-lg",
+    "cursor-pointer bg-[#1B0442] shadow-2xl p-5 m-[6%] flex flex-col justify-between rounded-lg",
   cardContainer: "grid grid-cols-3 m-5 h-full",
   header: "flex items-center space-x-5 text-[#6E4ABD] font-bold text-2xl",
   content: "p-5 text-[#DCCDF4] text-lg",
@@ -146,12 +146,12 @@ const Bounties = () => {
 
 export default Bounties;
 
-const BountyCard = ({ image, companyName, content, seatsLeft }) => (
+const BountyCard = ({ image, companyName, content, seatsLeft, bootcamp }) => (
   <>
     <div className={styles.cardWrapper}>
       <div className={styles.header}>
         <div className={styles.companyImage}>
-          <Image src={require(`../assets/images/${image}`)} />
+          {image && <Image src={require(`../assets/images/${image}`)} />}
         </div>
         <div
           style={{ fontFamily: "PilatExtended" }}
@@ -162,9 +162,22 @@ const BountyCard = ({ image, companyName, content, seatsLeft }) => (
       </div>
       <div className={styles.content}>{content}</div>
       <div className={styles.seatLeft}>
-        <p style={{ fontFamily: "PilatExtended" }}>Seats Left</p>{" "}
-        <p>{seatsLeft}</p>
+        <p style={{ fontFamily: "PilatExtended" }}>
+          {bootcamp ? "Price" : "Seats Left"}
+        </p>{" "}
+        <div className="flex space-x-3">
+          {bootcamp && (
+            <Image
+              height={15}
+              width={18}
+              src={require("../assets/images/ethLogo.png")}
+            />
+          )}
+          <p>{seatsLeft}</p>
+        </div>
       </div>
     </div>
   </>
 );
+
+export { BountyCard };

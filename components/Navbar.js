@@ -45,7 +45,15 @@ const Navbar = ({ connectWallet, walletAddress }) => {
           >
             Contest
           </div>
-          <div className={styles.navItem}>Mission</div>
+          <div
+            className={
+              styles.navItem +
+              ` ${path === "/bootcamp" ? "text-[#A672F6]" : ""}`
+            }
+            onClick={() => Router.push("/bootcamp")}
+          >
+            Bootcamp
+          </div>
           {walletAddress[0] ? (
             <div className={styles.connectWalletBtn}>
               {walletAddress[0].slice(0, 6) +
