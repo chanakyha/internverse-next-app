@@ -50,6 +50,26 @@ const courses = [
     nftImage: "nft.png",
     category: "Designer",
   },
+  {
+    title: "web3.0 from Scratch",
+    nftImage: "nft.png",
+    category: "Developer",
+  },
+  {
+    title: "101 Content Writing",
+    nftImage: "nft.png",
+    category: "Content",
+  },
+  {
+    title: "how to manage a community",
+    nftImage: "nft.png",
+    category: "Community",
+  },
+  {
+    title: "Building a community from scratch",
+    nftImage: "nft.png",
+    category: "Community",
+  },
 ];
 
 const styles = {
