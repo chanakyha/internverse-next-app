@@ -25,6 +25,31 @@ const courses = [
     nftImage: "nft.png",
     category: "Designer",
   },
+  {
+    title: "101 Community Management",
+    nftImage: "nft.png",
+    category: "Community",
+  },
+  {
+    title: "Content Writing from scratch",
+    nftImage: "nft.png",
+    category: "Content",
+  },
+  {
+    title: "Basics of Designing",
+    nftImage: "nft.png",
+    category: "Designer",
+  },
+  {
+    title: "Basics of BlockChain",
+    nftImage: "nft.png",
+    category: "Blockchain",
+  },
+  {
+    title: "Canva Basics",
+    nftImage: "nft.png",
+    category: "Designer",
+  },
 ];
 
 const styles = {
