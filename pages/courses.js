@@ -105,17 +105,7 @@ const Courses = () => {
             animateJSON={require("../assets/animations/others.json")}
           />
         </div>
-        <div className="flex justify-end">
-          <button
-            onClick={() =>
-              Router.push("https://calendly.com/prayasu/30min?month=2022-06")
-            }
-            className="hover:scale-110 bg-[#C19EF9] justify-center flex items-center px-5 py-2 rounded-full space-x-4"
-          >
-            <p className="text-lg font-bold">Post a Job</p>
-            <AiFillPlusCircle className="text-xl" />
-          </button>
-        </div>
+        <div className="flex justify-end"></div>
       </div>
       <div className="grid grid-cols-3">
         {courses.map((course, index) => {
