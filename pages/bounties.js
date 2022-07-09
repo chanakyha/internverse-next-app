@@ -146,7 +146,14 @@ const Bounties = () => {
 
 export default Bounties;
 
-const BountyCard = ({ image, companyName, content, seatsLeft, bootcamp }) => (
+const BountyCard = ({
+  image,
+  companyName,
+  content,
+  seatsLeft,
+  bootcamp,
+  courses,
+}) => (
   <>
     <div className={styles.cardWrapper}>
       <div className={styles.header}>
@@ -163,7 +170,7 @@ const BountyCard = ({ image, companyName, content, seatsLeft, bootcamp }) => (
       <div className={styles.content}>{content}</div>
       <div className={styles.seatLeft}>
         <p style={{ fontFamily: "PilatExtended" }}>
-          {bootcamp ? "Price" : "Seats Left"}
+          {courses ? "Mint NFT" : bootcamp ? "Price" : "Seats Left"}
         </p>{" "}
         <div className="flex space-x-3">
           {bootcamp && (
