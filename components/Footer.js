@@ -16,10 +16,11 @@ const Footer = () => {
     <div className={styles.wrapper}>
       <div className={styles.left}>
         <div className="text-3xl font-bold">
-          {/* <InternverseGradient /> */}
-          <Gradient dir="left-to-right" from="#F9AC21" to="#6B17EC">
-            InternVERSE
-          </Gradient>
+          <span style={{ fontFamily: "PilatExtended" }}>
+            <Gradient dir="left-to-right" from="#F9AC21" to="#6B17EC">
+              InternVERSE
+            </Gradient>
+          </span>
         </div>
         <h2 className="text-white text-xs">The Universe of Opportunities</h2>
       </div>
