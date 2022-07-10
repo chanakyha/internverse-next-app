@@ -134,7 +134,7 @@ const Home = () => {
               </div>
               <button
                 onClick={() => Router.push("/intern")}
-                className="z-[1] my-[5%] mx-5 bg-[#F9AC21] w-[220px] rounded-full outline outline-2 px-4 py-2 shadow-xl"
+                className="z-[0] my-[5%] mx-5 bg-[#F9AC21] w-[220px] rounded-full outline outline-2 px-4 py-2 shadow-xl"
               >
                 <div className={styles.buttonContent}>
                   <p>Find Companies</p>
