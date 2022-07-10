@@ -28,9 +28,11 @@ const Navbar = ({ connectWallet, walletAddress }) => {
               width={30}
               src={require("../assets/images/NavLogo.png")}
             />
-            <Gradient dir="left-to-right" from="#F9AC21" to="#6B17EC">
-              InternVerse
-            </Gradient>
+            <div style={{ fontFamily: "PilatExtended" }}>
+              <Gradient dir="left-to-right" from="#F9AC21" to="#6B17EC">
+                InternVERSE
+              </Gradient>
+            </div>
           </div>
         </div>
         <div className={styles.right}>
