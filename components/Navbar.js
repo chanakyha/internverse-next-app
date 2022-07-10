@@ -1,6 +1,7 @@
 import React from "react";
 import Gradient from "rgt";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 const styles = {
   wrapper: "fixed w-screen bg-[#1B0442] z-[1] shadow-2xl",
@@ -20,8 +21,13 @@ const Navbar = ({ connectWallet, walletAddress }) => {
         <div className={styles.left}>
           <div
             onClick={() => Router.push("/")}
-            className="cursor-pointer text-3xl"
+            className="cursor-pointer text-3xl flex items-center gap-2"
           >
+            <Image
+              height={30}
+              width={30}
+              src={require("../assets/images/NavLogo.png")}
+            />
             <Gradient dir="left-to-right" from="#F9AC21" to="#6B17EC">
               InternVerse
             </Gradient>
@@ -37,6 +43,16 @@ const Navbar = ({ connectWallet, walletAddress }) => {
           >
             Bounties
           </div>
+
+          <div
+            className={
+              styles.navItem +
+              ` ${path === "/bootcamp" ? "text-[#A672F6]" : ""}`
+            }
+            onClick={() => Router.push("/bootcamp")}
+          >
+            Bootcamp
+          </div>
           <div
             onClick={() => Router.push("/contest")}
             className={
@@ -46,13 +62,20 @@ const Navbar = ({ connectWallet, walletAddress }) => {
             Contest
           </div>
           <div
+            onClick={() => Router.push("/courses")}
             className={
-              styles.navItem +
-              ` ${path === "/bootcamp" ? "text-[#A672F6]" : ""}`
+              styles.navItem + ` ${path === "/courses" ? "text-[#A672F6]" : ""}`
             }
-            onClick={() => Router.push("/bootcamp")}
           >
-            Bootcamp
+            Courses
+          </div>
+          <div
+            onClick={() => Router.push("/getapp")}
+            className={
+              styles.navItem + ` ${path === "/getapp" ? "text-[#A672F6]" : ""}`
+            }
+          >
+            Get App
           </div>
           {walletAddress[0] ? (
             <div className={styles.connectWalletBtn}>

@@ -1,6 +1,5 @@
 import Router from "next/router";
 import React, { useState } from "react";
-import { AiFillPlusCircle } from "react-icons/ai";
 import Lottie from "react-lottie";
 import { BountyCard } from "./bounties";
 
