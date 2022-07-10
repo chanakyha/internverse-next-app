@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useEffect, useState } from "react";
 import { Toaster } from "react-hot-toast";
 import Web3 from "web3";
@@ -53,6 +54,10 @@ function MyApp({ Component, pageProps }) {
   };
   return (
     <>
+      <Head>
+        <title>InternVERSE</title>
+        <link rel="icon" href="./NavLogo.png" />
+      </Head>
       <Toaster position="top-center" reverseOrder={false} />
       <Navbar walletAddress={walletAddress} connectWallet={connectWallet} />
       <Component {...pageProps} />

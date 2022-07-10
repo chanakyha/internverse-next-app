@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 import React from "react";
 import { BountyCard } from "./bounties";
@@ -53,6 +54,9 @@ const content = [
 const Bootcamp = () => {
   return (
     <div className={styles.wrapper}>
+      <Head>
+        <title>Bootcamp</title>
+      </Head>
       <div
         style={{ fontFamily: "PilatExtended" }}
         className={styles.headerText}
@@ -73,6 +77,7 @@ const Bootcamp = () => {
       <div className={styles.cardBootcampContainer}>
         {data.map((course, index) => (
           <BountyCard
+            key={index}
             companyName={course.title}
             content={course.content}
             seatsLeft={course.price}

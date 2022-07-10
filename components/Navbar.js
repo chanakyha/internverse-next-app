@@ -21,7 +21,7 @@ const Navbar = ({ connectWallet, walletAddress }) => {
         <div className={styles.left}>
           <div
             onClick={() => Router.push("/")}
-            className="cursor-pointer text-3xl flex items-center gap-2"
+            className="cursor-pointer text-3xl flex items-center gap-5"
           >
             <Image
               height={30}
