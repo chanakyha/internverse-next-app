@@ -62,7 +62,7 @@ const Bootcamp = () => {
         style={{ fontFamily: "PilatExtended" }}
         className={styles.headerText}
       >
-        Get Trainer In
+        Get Trained In
       </div>
       <div className={styles.cardContainer}>
         {content.map((e, i) => (
