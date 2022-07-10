@@ -29,13 +29,13 @@ const ListOfSuperInterns = () => {
           List of SuperInterns
         </div>
         <div className={styles.cardContainer}>
-          <SuperInterns image="nft.png" name="Lorem ipsum" />
-          <SuperInterns image="nft.png" name="Lorem ipsum" />
-          <SuperInterns image="nft.png" name="Lorem ipsum" />
-          <SuperInterns image="nft.png" name="Lorem ipsum" />
-          <SuperInterns image="nft.png" name="Lorem ipsum" />
-          <SuperInterns image="nft.png" name="Lorem ipsum" />
-          <SuperInterns image="nft.png" name="Lorem ipsum" />
+          <SuperInterns image="nftFace.png" name="Lorem ipsum" />
+          <SuperInterns image="nftFace.png" name="Lorem ipsum" />
+          <SuperInterns image="nftFace.png" name="Lorem ipsum" />
+          <SuperInterns image="nftFace.png" name="Lorem ipsum" />
+          <SuperInterns image="nftFace.png" name="Lorem ipsum" />
+          <SuperInterns image="nftFace.png" name="Lorem ipsum" />
+          <SuperInterns image="nftFace.png" name="Lorem ipsum" />
         </div>
       </div>
     </div>

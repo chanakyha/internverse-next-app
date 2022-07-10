@@ -51,6 +51,7 @@ const content = [
   "Designing",
   "Development",
 ];
+
 const Bootcamp = () => {
   return (
     <div className={styles.wrapper}>
