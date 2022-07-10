@@ -173,7 +173,7 @@ const Home = () => {
                 text="CONTEST"
               />
               <CircleComponent
-                onClick={() => Router.push("/")}
+                onClick={() => Router.push("/bootcamp")}
                 image="rocket.png"
                 text="BOOTCAMP"
               />
